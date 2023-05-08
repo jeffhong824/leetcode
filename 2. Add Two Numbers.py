@@ -4,7 +4,7 @@
 #         self.val = val # 當前值
 #         self.next = next # 下一結點地址
 
-# <鏈表> Python在其標準庫中沒有鏈接列表
+# <鏈表 Linked List> Python在其標準庫中沒有鏈接列表
 
 # ■ 定義:
 # head保存首地址
