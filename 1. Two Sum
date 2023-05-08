@@ -1,0 +1,8 @@
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num_dict = {} # 建立字典 數字:位置
+        for i, num in enumerate(nums): # 遍歷一遍
+            complement = target - num # 減法，以利於後續確認有沒有相加剛好的數字
+            if complement in num_dict: return [num_dict[complement], i] # 當 補數 有出現於 字典 則 return [字典數位置,當前位置]
+            num_dict[num] = i # 條件未成立，繼續補充到字典
+        return []
