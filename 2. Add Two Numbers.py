@@ -21,7 +21,7 @@
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode: # l1 和 l2 是函數的兩個參數，它們的類型為 Optional[ListNode]，Optional 表示該參數可以為空，也就是說可以是 None 值。 而 -> 後面的 Optional[ListNode] 則是函數的返回值類型，也就是說，函數返回一個 ListNode 的可選值（即可能為 None）。
-        # 鏈表設定 head 
+        # 設定虛擬結點，不存值，作為指針永遠指向真正的 head
         dummy = ListNode() # 在鍊錶操作中，經常需要使用一個啞節點（dummy node）來簡化操作。啞節點通常是一個不存儲數據的空節點，其主要作用是作為鍊錶的頭節點，使得鍊錶操作更加方便。
         cur = dummy # cur 可以指向當前的節點，而 dummy 則可以始終指向鍊錶的頭節點
 
@@ -41,8 +41,11 @@ class Solution:
             l2 = l2.next if l2 else None
         
         return dummy.next # 將 dummy node 的下一筆 return
-      
+    
+    
+# Time complexity: O(max(n,m))     
+# Space complexity: O(max(n,m))     
           
-      
+# Reference from: https://www.youtube.com/watch?v=-UBiYuIVErM
           
           
